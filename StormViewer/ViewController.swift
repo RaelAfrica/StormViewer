@@ -44,22 +44,18 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //1. try loading the 'Detail' vc and typecasting it to be DetailViewController
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            
+            //2. success! sets its selectImage property
+            vc.selectedImage = pictures[indexPath.row]
+            
+            //3. push vc onto the nav controller
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     
     

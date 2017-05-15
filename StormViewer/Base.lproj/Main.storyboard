@@ -47,6 +47,38 @@
             </objects>
             <point key="canvasLocation" x="154" y="132"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="6iO-9r-Pfp">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="zUh-UK-01O" customClass="DetailViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H3n-dc-jwc"/>
+                        <viewControllerLayoutGuide type="bottom" id="mfw-Zh-qhu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CtJ-b4-Ngb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ett-CU-qOL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ett-CU-qOL" firstAttribute="top" secondItem="H3n-dc-jwc" secondAttribute="bottom" id="5xj-OO-2jm"/>
+                            <constraint firstAttribute="trailing" secondItem="ett-CU-qOL" secondAttribute="trailing" id="Iye-0V-QmO"/>
+                            <constraint firstItem="ett-CU-qOL" firstAttribute="leading" secondItem="CtJ-b4-Ngb" secondAttribute="leading" id="M9d-6C-OEs"/>
+                            <constraint firstItem="mfw-Zh-qhu" firstAttribute="top" secondItem="ett-CU-qOL" secondAttribute="bottom" id="Pgo-ag-m1p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ett-CU-qOL" id="afv-7L-e4O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ue-gr-0qD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="132"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xpk-Lb-pxh">
             <objects>
