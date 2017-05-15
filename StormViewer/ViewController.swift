@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
+    var pictures = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,10 +20,15 @@ class ViewController: UIViewController {
         let items = try! fm.contentsOfDirectory(atPath: path)
         
         for item in items {
+            
             if item.hasPrefix("nssl") {
                 //this is the picture to load!
+
+                pictures.append(item)
             }
         }
+        
+        print(pictures)
     }
 
     override func didReceiveMemoryWarning() {
